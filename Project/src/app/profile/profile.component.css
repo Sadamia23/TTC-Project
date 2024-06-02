@@ -1,0 +1,75 @@
+.avatar {
+  width: 300px;
+  height: 300px;
+}
+
+.avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile-card {
+  display: flex;
+  gap: 50px;
+  margin-top: 50px;
+  justify-content: center;
+}
+
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  height: 32px;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+nz-header {
+  background: #fff;
+  padding-left: 30px;
+}
+
+nz-content {
+  margin: 0 16px;
+}
+
+nz-breadcrumb {
+  margin: 16px 0;
+}
+
+.inner-content {
+  padding: 24px;
+  background: #fff;
+  min-height: 360px;
+}
+
+nz-footer {
+  text-align: center;
+}
+
+.ant-layout-sider {
+  background: #b11616;
+}
+
+.ant-menu.ant-menu-dark {
+  color: rgba(255, 255, 255, 0.65);
+  background: #e7343f;
+}
+
+.nz-menu-item {
+  background-color: red !important;
+}
+
+nz-menu-item::selection {
+  color: #fff;
+  background: #000000;
+}
+
+.ant-menu.ant-menu-dark .ant-menu-item-selected {
+  background-color: #002140;
+}

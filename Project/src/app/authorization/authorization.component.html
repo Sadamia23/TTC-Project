@@ -1,0 +1,33 @@
+<div class="auth-container">
+  <div class="auth-form">
+    <h2>{{ "authorization" | translate }}</h2>
+    <form (ngSubmit)="loginAction()">
+      <label for="login-email">{{ "Email" | translate }}</label>
+      <input
+        type="email"
+        id="login-email"
+        [(ngModel)]="email"
+        name="email"
+        required
+      />
+
+      <label for="login-password">{{ "Password" | translate }}</label>
+      <input
+        type="password"
+        id="login-password"
+        [(ngModel)]="password"
+        name="password"
+        [ngClass]="{ 'wrong': isWrong}"
+        required
+      />
+
+      <input type="submit" value="{{ 'Log In' | translate }}" />
+    </form>
+    <div class="register-container">
+      <span
+        >{{ "Don't have an account?" | translate }}
+        <a href="/register">{{ "Register Now" | translate }}</a></span
+      >
+    </div>
+  </div>
+</div>

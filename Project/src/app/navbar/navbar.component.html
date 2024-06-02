@@ -1,0 +1,134 @@
+<div class="header">
+  <div class="container">
+    <div class="navbar">
+      <div class="logo">
+        <a href="/" class="logo-link">
+          <img
+            class="logo-img desktop-only"
+            src="https://ttc.com.ge/themes/contrib/ttc/logo.png"
+          />
+          <img
+            class="logo-img mobile-only"
+            src="https://ttc.com.ge/themes/contrib/ttc/images/mobile-logo.png"
+          />
+        </a>
+      </div>
+
+      <nav>
+        <ul class="main-menu">
+          <li>
+            <a href="">{{ "about us" | translate }}</a>
+          </li>
+
+          <li class="hover-container">
+            <a href="" class="anchor hover-target">{{
+              "services" | translate
+            }}</a>
+            <span
+              nz-icon
+              nzType="down"
+              nzTheme="outline"
+              class="arrow-down"
+            ></span>
+
+            <ul class="main-menu-submenu hover-list">
+              <li>
+                <a href="https://transit.ttc.com.ge/#/plan?setLng=ka">
+                  {{ "journey planner" | translate }}
+                </a>
+              </li>
+              <li>
+                <a href="https://transit.ttc.com.ge/#/schedule?setLng=ka">
+                  {{ "timetable" | translate }}
+                </a>
+              </li>
+              <li>
+                <a href="https://transit.ttc.com.ge/#/realtime?setLng=ka">
+                  {{ "real time bus" | translate }}
+                </a>
+              </li>
+              <li>
+                <a href="https://transit.ttc.com.ge/#/board-info?setLng=ka">
+                  {{ "bus stop" | translate }}
+                </a>
+              </li>
+              <li>
+                <a href="/index.php/ka/penalties">
+                  {{ "pay a bus fine" | translate }}
+                </a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="">{{ "structure" | translate }}</a>
+          </li>
+
+          <li class="hover-container">
+            <a href="" class="anchor hover-target">{{
+              "tenders" | translate
+            }}</a>
+            <span
+              nz-icon
+              nzType="down"
+              nzTheme="outline"
+              class="arrow-down"
+              style="right: 55px"
+            ></span>
+            <ul class="main-menu-submenu hover-list">
+              <li>
+                <a href="/index.php/ka/tenders">{{
+                  "electronic government" | translate
+                }}</a>
+              </li>
+              <li>
+                <a href="/index.php/ka/international-tenders">
+                  {{ "international purchases" | translate }}
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <a href="">{{ "contact" | translate }}</a>
+          </li>
+
+          <li>
+            <a href="">{{ "vacancies" | translate }}</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="auth">
+      <a href="/auth" *ngIf="authService.isAuthorised() === false"
+        >{{ "authorization" | translate }}
+        <span nz-icon nzType="user" nzTheme="outline"></span>
+      </a>
+
+      <a (click)="logOut()" *ngIf="authService.isAuthorised() === true"
+        >{{ "Log Out" | translate }}
+        <!-- <span>{{profile.profileData.name}}</span> -->
+      </a>
+
+      <a href="/profile" *ngIf="authService.isAuthorised() == true">{{"Profile" | translate}}</a>
+    </div>
+    <div class="languages">
+      <div
+        class="lang eng"
+        (click)="ChangeToEng()"
+        [ngClass]="{ 'active-lang': isEng }"
+      >
+        ENG
+      </div>
+      <div>/</div>
+      <div
+        class="lang geo"
+        (click)="ChangeToGeo()"
+        [ngClass]="{ 'active-lang': isGeo }"
+      >
+        ქართ
+      </div>
+    </div>
+  </div>
+
+  <app-header-bottom></app-header-bottom>
+</div>
