@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { AuthService } from '../services/auth.service';
+import { AuthService } from '../../services/auth.service';
 import { Router } from '@angular/router';
 
 @Component({
@@ -19,7 +19,7 @@ export class NavbarComponent implements OnInit {
   constructor(
     private translateService: TranslateService,
     public authService: AuthService,
-    private router: Router,
+    private router: Router
   ) {}
   logOut() {
     localStorage.clear();

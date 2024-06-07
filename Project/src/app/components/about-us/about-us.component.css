@@ -1,0 +1,48 @@
+body {
+  color: white;
+}
+
+.grid img {
+  width: 80px;
+  height: 60px;
+}
+
+.gallery {
+  max-width: 608px;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+  margin-top: 60px;
+}
+.basic-head {
+  margin-bottom: 26px;
+}
+.page-title.with-line {
+  padding-bottom: 4px;
+  font-size: 25px;
+  margin-bottom: 25px;
+  line-height: 30px;
+}
+.page-date {
+  color: #787d88;
+  font-size: 14px;
+}
+
+.basic-text ul {
+  margin: 20px 20px;
+}
+
+.basic-app .basic-text ul li {
+  padding-left: 18px;
+}
+
+.basic-text p {
+  margin-top: 34px;
+  font-size: 14px;
+}
+
+.with-line{
+    border-bottom: 2px solid rgb(247, 43, 43);
+}

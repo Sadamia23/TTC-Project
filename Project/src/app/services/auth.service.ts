@@ -1,8 +1,4 @@
-import {
-  HttpClient,
-  HttpErrorResponse,
-  HttpHeaders,
-} from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { APIBuilder } from '../../apiBuilder';
 import { IUser } from '../interfaces/user.model';
@@ -50,5 +46,15 @@ export class AuthService {
       password: password,
       avatar: avatar,
     });
+  }
+
+  getData() {
+    this._http
+      .get(
+        APIBuilder.useProxy(
+          'https://europop.ge/api/featured-posts'
+        )
+      )
+      .subscribe((data) => console.log(data));
   }
 }

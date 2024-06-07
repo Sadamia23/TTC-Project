@@ -1,0 +1,24 @@
+section {
+  background-color: #fafafa;
+}
+.container {
+  padding: 60px 15px;
+}
+.page-title.with-line {
+  padding-bottom: 4px;
+  font-size: 25px;
+  margin-bottom: 25px;
+  line-height: 30px;
+}
+
+span {
+  padding-bottom: 10px;
+  border-bottom: 2px solid red;
+}
+
+.scheme {
+  margin-top: 30px;
+}
+.scheme img {
+  width: 100%;
+}

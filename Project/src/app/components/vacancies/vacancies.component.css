@@ -1,0 +1,36 @@
+.vacancy {
+  padding: 20px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.vacancy:hover {
+  border: 1px solid red;
+}
+
+.vacancy a {
+  text-decoration: none;
+  color: #4f8cfd;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+.container {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+}
+
+section {
+  background-color: #fafafa;
+}
+
+span {
+  margin-bottom: 40px;
+  padding-bottom: 30px !important;
+  font-size: 40px;
+  border-bottom: 2px solid red;
+}

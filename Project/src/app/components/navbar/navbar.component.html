@@ -17,7 +17,7 @@
       <nav>
         <ul class="main-menu">
           <li>
-            <a href="">{{ "about us" | translate }}</a>
+            <a href="/about-us">{{ "about us" | translate }}</a>
           </li>
 
           <li class="hover-container">
@@ -33,40 +33,43 @@
 
             <ul class="main-menu-submenu hover-list">
               <li>
-                <a href="https://transit.ttc.com.ge/#/plan?setLng=ka">
+                <a href="/planner">
                   {{ "journey planner" | translate }}
                 </a>
               </li>
               <li>
-                <a href="https://transit.ttc.com.ge/#/schedule?setLng=ka">
-                  {{ "timetable" | translate }}
+                <a href="/timetables">
+                  {{ "timetables" | translate }}
                 </a>
               </li>
               <li>
-                <a href="https://transit.ttc.com.ge/#/realtime?setLng=ka">
+                <a href="/buses">
                   {{ "real time bus" | translate }}
                 </a>
               </li>
               <li>
-                <a href="https://transit.ttc.com.ge/#/board-info?setLng=ka">
+                <a href="/stops">
                   {{ "bus stop" | translate }}
                 </a>
               </li>
               <li>
-                <a href="/index.php/ka/penalties">
+                <a href="https://ttc.com.ge/ka/penalties">
                   {{ "pay a bus fine" | translate }}
                 </a>
               </li>
             </ul>
           </li>
           <li>
-            <a href="">{{ "structure" | translate }}</a>
+            <a href="/report-scheme">{{ "structure" | translate }}</a>
           </li>
 
           <li class="hover-container">
-            <a href="" class="anchor hover-target">{{
-              "tenders" | translate
-            }}</a>
+            <a
+              href="https://ttc.com.ge/ka/tenders"
+              target="_blank"
+              class="anchor hover-target"
+              >{{ "tenders" | translate }}</a
+            >
             <span
               nz-icon
               nzType="down"
@@ -76,12 +79,12 @@
             ></span>
             <ul class="main-menu-submenu hover-list">
               <li>
-                <a href="/index.php/ka/tenders">{{
+                <a href="https://ttc.com.ge/index.php/ka/tenders" target="_blank">{{
                   "electronic government" | translate
                 }}</a>
               </li>
               <li>
-                <a href="/index.php/ka/international-tenders">
+                <a href="https://ttc.com.ge/index.php/ka/international-tenders" target="_blank">
                   {{ "international purchases" | translate }}
                 </a>
               </li>
@@ -89,11 +92,11 @@
           </li>
 
           <li>
-            <a href="">{{ "contact" | translate }}</a>
+            <a href="/contact-us">{{ "contact" | translate }}</a>
           </li>
 
           <li>
-            <a href="">{{ "vacancies" | translate }}</a>
+            <a href="/vacancies">{{ "vacancies" | translate }}</a>
           </li>
         </ul>
       </nav>
@@ -106,10 +109,11 @@
 
       <a (click)="logOut()" *ngIf="authService.isAuthorised() === true"
         >{{ "Log Out" | translate }}
-        <!-- <span>{{profile.profileData.name}}</span> -->
       </a>
 
-      <a href="/profile" *ngIf="authService.isAuthorised() == true">{{"Profile" | translate}}</a>
+      <a href="/profile" *ngIf="authService.isAuthorised() == true">{{
+        "Profile" | translate
+      }}</a>
     </div>
     <div class="languages">
       <div
@@ -129,6 +133,4 @@
       </div>
     </div>
   </div>
-
-  <app-header-bottom></app-header-bottom>
 </div>

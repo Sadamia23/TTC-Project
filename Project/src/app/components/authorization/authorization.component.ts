@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { AuthService } from '../services/auth.service';
-import { IToken } from '../interfaces/token.model';
+import { AuthService } from '../../services/auth.service';
+import { IToken } from '../../interfaces/token.model';
 import { Router } from '@angular/router';
 
 @Component({

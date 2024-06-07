@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="gallery">
+    <div class="card">
+      <p-galleria
+        [value]="images"
+        [responsiveOptions]="responsiveOptions"
+        [containerStyle]="{
+          'max-width': '608px;',
+          color: 'white',
+        }"
+        [numVisible]="5"
+        [circular]="true"
+      >
+        <ng-template pTemplate="item" let-item>
+          <img [src]="item.itemImageSrc" style="width: 608px; height: 353px" />
+        </ng-template>
+        <ng-template pTemplate="thumbnail" let-item>
+          <div class="grid grid-nogutter justify-content-center">
+            <img [src]="item.thumbnailImageSrc" />
+          </div>
+        </ng-template>
+      </p-galleria>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="basic-head">
+      <h2 class="page-title with-line caps">
+        <span>{{ "About Tbilisi transport company" | translate }}</span>
+      </h2>
+      <span class="page-date"></span>
+    </div>
+
+    <div class="basic-text clearfix">
+      <div>
+        <p>
+          <span>{{
+            "Tbilisi Transport Company (formerly Tbilisi Metro Ltd), which is 100% owned by Tbilisi City Hall, has been operating since 1966 when the first subway to Didube - Rustaveli was opened"
+              | translate
+          }}</span>
+        </p>
+
+        <ul>
+          <li>
+            <span>{{
+              "In 2009, according to the decision of the Tbilisi City Hall, the company was given ownership of municipal buses and related real estate in the form of three bus depot"
+                | translate
+            }}</span>
+          </li>
+          <li>
+            <span>{{
+              "In 2012 the company joined Tbilisi Rope way Infrastructure and the newly constructed Rike-Narikala Rope Way"
+                | translate
+            }}</span>
+          </li>
+          <li>
+            <span
+              >{{
+                "In 2018, the company joined Tbilisi's parking system with up to 32'000 parking spaces"
+                  | translate
+              }}
+            </span>
+          </li>
+        </ul>
+
+        <p>
+          <span
+            >{{
+              "The company employs up to 6'492 people who work continuously to provide high-quality transport services to travelers and city guests alike and to make their journey as safe and comfortable as possible"
+                | translate
+            }}
+          </span>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

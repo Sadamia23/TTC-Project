@@ -1,0 +1,125 @@
+<div class="parent">
+  <div class="footer-top">
+    <div class="container">
+      <div class="footer-title">
+        <div class="footer-title-caps">
+          <h3>{{ "THE NUMBER OF TRAVEL" | translate }}</h3>
+          <span>{{ Date }}</span>
+        </div>
+
+        <div class="ttc-trafic-items">
+          <div class="ttc-trafic-item">
+            <a href="#" class="ttc-trafic-link">
+              <span class="ttc-trafic-ic">
+                <img
+                  src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Bus_icon_black_and_transparent_background.svg/1024px-Bus_icon_black_and_transparent_background.svg.png"
+                />
+              </span>
+              <span class="ttc-trafic-info">
+                <span class="ttc-trafic-num num">578094</span>
+                <span class="ttc-trafic-name">{{ "Bus" | translate }}</span>
+              </span>
+            </a>
+          </div>
+          <div class="ttc-trafic-item">
+            <a href="#" class="ttc-trafic-link">
+              <span class="ttc-trafic-ic">
+                <img
+                  src="https://cdn1.iconfinder.com/data/icons/transportation-28/100/12_Cableway-512.png"
+                />
+              </span>
+              <span class="ttc-trafic-info">
+                <span class="ttc-trafic-num num">8569</span>
+                <span class="ttc-trafic-name">{{
+                  "Cable Car" | translate
+                }}</span>
+              </span>
+            </a>
+          </div>
+          <div class="ttc-trafic-item">
+            <a href="#" class="ttc-trafic-link">
+              <span class="ttc-trafic-ic">
+                <img
+                  src="https://www.iconpacks.net/icons/1/free-train-icon-1045-thumb.png"
+                />
+              </span>
+              <span class="ttc-trafic-info">
+                <span class="ttc-trafic-num num">249965</span>
+                <span class="ttc-trafic-name">{{
+                  "Subway train" | translate
+                }}</span>
+              </span>
+            </a>
+          </div>
+          <div class="ttc-trafic-item">
+            <a href="#" class="ttc-trafic-link">
+              <span class="ttc-trafic-ic">
+                <img
+                  src="https://static.thenounproject.com/png/3584478-200.png"
+                />
+              </span>
+              <span class="ttc-trafic-info">
+                <span class="ttc-trafic-num num">355762</span>
+                <span class="ttc-trafic-name">{{ "Minibus" | translate }}</span>
+              </span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-middle">
+    <div class="container">
+      <ul>
+        <li>
+          <a href="" class="is-active">{{ "Home" | translate }}</a>
+        </li>
+        <li>
+          <a href="/about-us">{{ "about us" | translate }}</a>
+        </li>
+        <li>
+          <a href="/report-scheme">{{
+            "structure" | translate
+          }}</a>
+        </li>
+        <li>
+          <a href="">{{
+            "tenders" | translate
+          }}</a>
+        </li>
+        <li>
+          <a href="/contact-us">{{
+            "contact" | translate
+          }}</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="copy-rights">
+      <div class="footer-logo">
+        <img
+          src="https://ttc.com.ge/themes/contrib/ttc/images/footer-logo.svg"
+          alt=""
+        />
+        <a
+          href="https://www.facebook.com/ttc.com.ge/"
+          target="_blank"
+          class="facebook-icon-footer"
+        >
+          <img
+            src="https://ttc.com.ge/themes/contrib/ttc/images/facebook-icon.svg"
+            alt=""
+          />
+        </a>
+      </div>
+      <p class="footer-copyright">{{ "all rights" | translate }}</p>
+
+      <button (click)="scrollToTop()" class="scrollToTop">
+        <span nz-icon nzType="arrow-up" nzTheme="outline"></span>
+      </button>
+    </div>
+  </div>
+</div>

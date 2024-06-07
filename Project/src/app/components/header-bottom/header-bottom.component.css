@@ -1,3 +1,6 @@
+.parent {
+  background-color: #e7343f !important;
+}
 .container {
   padding-bottom: 50px;
   max-width: 1320px;

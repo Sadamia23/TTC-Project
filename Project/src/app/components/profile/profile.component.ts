@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { IUser } from '../interfaces/user.model';
-import { AuthService } from '../services/auth.service';
+import { IUser } from '../../interfaces/user.model';
+import { AuthService } from '../../services/auth.service';
 
 @Component({
   selector: 'app-profile',
@@ -9,13 +9,11 @@ import { AuthService } from '../services/auth.service';
 })
 export class ProfileComponent {
   profileData!: IUser;
-  
+
   constructor(private _authService: AuthService) {
     this._authService.getProfile().subscribe((data) => {
       console.log(data);
       this.profileData = data;
     });
   }
-
-  
 }
