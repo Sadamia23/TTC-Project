@@ -14,123 +14,263 @@
         </a>
       </div>
 
-      <nav>
-        <ul class="main-menu">
-          <li>
-            <a href="/about-us">{{ "about us" | translate }}</a>
-          </li>
-
-          <li class="hover-container">
-            <a href="" class="anchor hover-target">{{
-              "services" | translate
-            }}</a>
-            <span
-              nz-icon
-              nzType="down"
-              nzTheme="outline"
-              class="arrow-down"
-            ></span>
-
-            <ul class="main-menu-submenu hover-list">
-              <li>
-                <a href="/planner">
-                  {{ "journey planner" | translate }}
-                </a>
-              </li>
-              <li>
-                <a href="/timetables">
-                  {{ "timetables" | translate }}
-                </a>
-              </li>
-              <li>
-                <a href="/buses">
-                  {{ "real time bus" | translate }}
-                </a>
-              </li>
-              <li>
-                <a href="/stops">
-                  {{ "bus stop" | translate }}
-                </a>
-              </li>
-              <li>
-                <a href="https://ttc.com.ge/ka/penalties">
-                  {{ "pay a bus fine" | translate }}
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="/report-scheme">{{ "structure" | translate }}</a>
-          </li>
-
-          <li class="hover-container">
-            <a
-              href="https://ttc.com.ge/ka/tenders"
-              target="_blank"
-              class="anchor hover-target"
-              >{{ "tenders" | translate }}</a
-            >
-            <span
-              nz-icon
-              nzType="down"
-              nzTheme="outline"
-              class="arrow-down"
-              style="right: 55px"
-            ></span>
-            <ul class="main-menu-submenu hover-list">
-              <li>
-                <a href="https://ttc.com.ge/index.php/ka/tenders" target="_blank">{{
-                  "electronic government" | translate
-                }}</a>
-              </li>
-              <li>
-                <a href="https://ttc.com.ge/index.php/ka/international-tenders" target="_blank">
-                  {{ "international purchases" | translate }}
-                </a>
-              </li>
-            </ul>
-          </li>
-
-          <li>
-            <a href="/contact-us">{{ "contact" | translate }}</a>
-          </li>
-
-          <li>
-            <a href="/vacancies">{{ "vacancies" | translate }}</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="auth">
-      <a href="/auth" *ngIf="authService.isAuthorised() === false"
-        >{{ "authorization" | translate }}
-        <span nz-icon nzType="user" nzTheme="outline"></span>
-      </a>
-
-      <a (click)="logOut()" *ngIf="authService.isAuthorised() === true"
-        >{{ "Log Out" | translate }}
-      </a>
-
-      <a href="/profile" *ngIf="authService.isAuthorised() == true">{{
-        "Profile" | translate
-      }}</a>
-    </div>
-    <div class="languages">
-      <div
-        class="lang eng"
-        (click)="ChangeToEng()"
-        [ngClass]="{ 'active-lang': isEng }"
-      >
-        ENG
+      <div class="mobile-only">
+        <p-button
+          type="button"
+          class="mr-2 large-icon-button"
+          (click)="sidebarVisible2 = true"
+          icon="pi pi-bars"
+          text="saba"
+        />
       </div>
-      <div>/</div>
-      <div
-        class="lang geo"
-        (click)="ChangeToGeo()"
-        [ngClass]="{ 'active-lang': isGeo }"
-      >
-        ქართ
+      <div class="nav-items">
+        <nav>
+          <ul class="main-menu">
+            <li>
+              <a href="/about-us">{{ "about us" | translate }}</a>
+            </li>
+
+            <li class="hover-container">
+              <a href="" class="anchor hover-target">{{
+                "services" | translate
+              }}</a>
+              <span
+                nz-icon
+                nzType="down"
+                nzTheme="outline"
+                class="arrow-down"
+              ></span>
+
+              <ul class="main-menu-submenu hover-list">
+                <li>
+                  <a href="/planner">
+                    {{ "journey planner" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a href="/timetables">
+                    {{ "timetables" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a href="/buses">
+                    {{ "real time bus" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a href="/stops">
+                    {{ "bus stop" | translate }}
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    {{ "pay a bus fine" | translate }}
+                  </a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="/report-scheme">{{ "structure" | translate }}</a>
+            </li>
+
+            <li class="hover-container">
+              <a
+                href="https://ttc.com.ge/ka/tenders"
+                target="_blank"
+                class="anchor hover-target"
+                >{{ "tenders" | translate }}</a
+              >
+              <span
+                nz-icon
+                nzType="down"
+                nzTheme="outline"
+                class="arrow-down"
+                style="right: 55px"
+              ></span>
+              <ul class="main-menu-submenu hover-list">
+                <li>
+                  <a
+                    href="https://ttc.com.ge/index.php/ka/tenders"
+                    target="_blank"
+                    >{{ "electronic government" | translate }}</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://ttc.com.ge/index.php/ka/international-tenders"
+                    target="_blank"
+                  >
+                    {{ "international purchases" | translate }}
+                  </a>
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <a href="/contact-us">{{ "contact" | translate }}</a>
+            </li>
+
+            <li>
+              <a href="/vacancies">{{ "vacancies" | translate }}</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="auth">
+          <a href="/auth" *ngIf="authService.isAuthorised() === false"
+            >{{ "authorization" | translate }}
+            <span nz-icon nzType="user" nzTheme="outline"></span>
+          </a>
+
+          <a (click)="logOut()" *ngIf="authService.isAuthorised() === true"
+            >{{ "Log Out" | translate }}
+          </a>
+
+          <a href="/profile" *ngIf="authService.isAuthorised() == true">{{
+            "Profile" | translate
+          }}</a>
+        </div>
+        <div class="languages">
+          <div
+            class="lang eng"
+            (click)="ChangeToEng()"
+            [ngClass]="{ 'active-lang': isEng }"
+          >
+            ENG
+          </div>
+          <div>/</div>
+          <div
+            class="lang geo"
+            (click)="ChangeToGeo()"
+            [ngClass]="{ 'active-lang': isGeo }"
+          >
+            ქართ
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </div>
+
+<p-sidebar [(visible)]="sidebarVisible2" position="right">
+  <div class="languages l-mobile">
+    <div
+      class="lang eng l-color"
+      (click)="ChangeToEng()"
+      [ngClass]="{ 'active-lang': isEng }"
+    >
+      ENG
+    </div>
+    <div class="l-color">/</div>
+    <div
+      class="lang geo l-color"
+      (click)="ChangeToGeo()"
+      [ngClass]="{ 'active-lang': isGeo }"
+    >
+      ქართ
+    </div>
+  </div>
+  <div class="auth a-mobile">
+    <a href="/auth" *ngIf="authService.isAuthorised() === false"
+      >{{ "authorization" | translate }}
+      <span nz-icon nzType="user" nzTheme="outline"></span>
+    </a>
+
+    <a (click)="logOut()" *ngIf="authService.isAuthorised() === true"
+      >{{ "Log Out" | translate }}
+    </a>
+
+    <a href="/profile" *ngIf="authService.isAuthorised() == true">{{
+      "Profile" | translate
+    }}</a>
+  </div>
+  <nav class="header-menu">
+    <ul class="header-menu-items">
+      <li class="header-menu-item">
+        <a href="/planner" target="_blank">
+          <img
+            src="../../../assets/images/header/journey-planner.png"
+            alt="img"
+            class="header-menu-img"
+          />
+
+          {{ "journey planner" | translate }}
+        </a>
+      </li>
+      <li class="header-menu-item">
+        <a href="/timetables" target="_blank">
+          <img
+            class="header-menu-img"
+            src="../../../assets/images/header/timetable.png"
+            alt=""
+          />
+          {{ "timetables" | translate }}
+        </a>
+      </li>
+      <li class="header-menu-item">
+        <a href="/buses">
+          <img
+            class="header-menu-img"
+            src="../../../assets/images/header/head-menu-bus.png"
+            alt=""
+          />
+          {{ "real time bus" | translate }}
+        </a>
+      </li>
+      <li class="header-menu-item">
+        <a href="/stops" target="_blank">
+          <img
+            class="header-menu-img"
+            src="../../../assets/images/header/tablo.png"
+            alt=""
+          />
+          {{ "bus stop" | translate }}
+        </a>
+      </li>
+      <li class="header-menu-item">
+        <a href="https://parking.tbilisi.gov.ge/" target="_blank">
+          <img
+            class="header-menu-img"
+            src="../../../assets/images/header/parking.png"
+            alt=""
+          />
+          {{ "tbilisi parking" | translate }}
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <nav class="main-menu-nav">
+    <ul class="main-menu-items">
+      <li class="main-menu-item">
+        <a href="/about-us"
+          >{{ "about us" | translate }} <i class="pi pi-angle-right"></i>
+        </a>
+      </li>
+      <li class="main-menu-item">
+        <a href=""
+          >{{ "services" | translate }} <i class="pi pi-angle-down"></i>
+        </a>
+      </li>
+      <li class="main-menu-item">
+        <a href="planner"
+          >{{ "journey planner" | translate }} <i class="pi pi-angle-right"></i>
+        </a>
+      </li>
+      <li class="main-menu-item">
+        <a href="/timetables"
+          >{{ "timetables" | translate }} <i class="pi pi-angle-down"></i>
+        </a>
+      </li>
+      <li class="main-menu-item">
+        <a href="/buses"
+          >{{ "real time bus" | translate }} <i class="pi pi-angle-right"></i>
+        </a>
+      </li>
+      <li class="main-menu-item">
+        <a href="/stops"
+          >{{ "bus stop" | translate }} <i class="pi pi-angle-right"></i>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</p-sidebar>

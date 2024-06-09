@@ -9,11 +9,30 @@ import { AuthService } from '../../services/auth.service';
 })
 export class ProfileComponent {
   profileData!: IUser;
+  isLoading: boolean = false;
 
   constructor(private _authService: AuthService) {
-    this._authService.getProfile().subscribe((data) => {
-      console.log(data);
-      this.profileData = data;
-    });
+    this.showSpinner();
+
+    setTimeout(() => {
+      this._authService.getProfile().subscribe(
+        (data) => {
+          this.profileData = data;
+          this.hideSpinner();
+        },
+        (error) => {
+          console.log(error);
+          this.hideSpinner();
+        }
+      );
+    }, 1000);
+  }
+
+  showSpinner() {
+    this.isLoading = true;
+  }
+
+  hideSpinner() {
+    this.isLoading = false;
   }
 }

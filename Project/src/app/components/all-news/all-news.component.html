@@ -1,0 +1,44 @@
+<app-header-bottom></app-header-bottom>
+
+<section>
+  <div class="spinner" *ngIf="isLoading">
+    <div class="card flex justify-content-center">
+      <p-progressSpinner ariaLabel="loading" />
+    </div>
+  </div>
+  <div class="container" *ngIf="!isLoading">
+    <div class="title">
+      <h3 class="block-title">
+        <span class="block-title-in">{{ "news" | translate }}</span>
+      </h3>
+    </div>
+    <div class="news">
+      <div class="content">
+        <article
+          class="news-item col-md-4"
+          *ngFor="let news of currentPageNews"
+        >
+          <a href="{{ news.url }}" target="_blank" class="news-item-link">
+            <span class="news-img">
+              <img src="{{ news.urlToImage }}" alt="News" />
+            </span>
+            <h2 class="news-title caps">{{ news.title }}</h2>
+            <span class="news-date mrglovani">{{
+              news.publishedAt | date
+            }}</span>
+          </a>
+        </article>
+      </div>
+      <div class="pagination">
+        <nz-pagination
+          [nzPageIndex]="1"
+          [nzTotal]="allNews.length"
+          [nzPageSize]="9"
+          [nzSize]="'small'"
+          [nzResponsive]="true"
+          (nzPageIndexChange)="onPageChange($event)"
+        ></nz-pagination>
+      </div>
+    </div>
+  </div>
+</section>

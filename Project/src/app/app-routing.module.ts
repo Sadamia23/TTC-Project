@@ -12,6 +12,9 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ReportSchemeComponent } from './components/report-scheme/report-scheme.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { VacanciesComponent } from './components/vacancies/vacancies.component';
+import { AllNewsComponent } from './components/all-news/all-news.component';
+import { FaresComponent } from './components/fares/fares.component';
+import { ErrorComponent } from './components/error/error.component';
 
 const routes: Routes = [
   {
@@ -61,6 +64,18 @@ const routes: Routes = [
   {
     path: 'vacancies',
     component: VacanciesComponent,
+  },
+  {
+    path: 'news',
+    component: AllNewsComponent,
+  },
+  {
+    path: 'fares',
+    component: FaresComponent,
+  },
+  {
+    path: '**',
+    component: ErrorComponent,
   },
 ];
 

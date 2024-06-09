@@ -23,6 +23,7 @@ swiper-slide img {
 .slide {
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   width: 100%;
   height: 100%;
   display: flex;
@@ -41,4 +42,22 @@ swiper-slide img {
 }
 .slide-3 {
   background-image: url("../../assets/images/slider/slider3.jpg");
+}
+
+@media (max-width: 800px) {
+  .slide {
+    padding: 0px;
+    justify-content: center;
+    align-items: flex-end;
+    padding-bottom: 10px;
+  }
+}
+
+@media (max-width: 350px) {
+  swiper-container {
+    height: 300px;
+  }
+  .slide {
+    font-size: 30px;
+  }
 }

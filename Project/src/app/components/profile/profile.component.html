@@ -1,4 +1,10 @@
-<nz-layout>
+<div class="container" *ngIf="isLoading">
+  <div class="card flex justify-content-center">
+    <p-progressSpinner ariaLabel="loading" />
+  </div>
+</div>
+
+<nz-layout *ngIf="!isLoading">
   <nz-sider nzCollapsible nzWidth="200px">
     <div class="logo">
       <img
@@ -35,7 +41,9 @@
     </ul>
   </nz-sider>
   <nz-layout>
-    <nz-header><h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h1> </nz-header>
+    <nz-header
+      ><h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit</h1>
+    </nz-header>
     <nz-content>
       <nz-breadcrumb>
         <nz-breadcrumb-item>User</nz-breadcrumb-item>

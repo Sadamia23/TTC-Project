@@ -48,13 +48,5 @@ export class AuthService {
     });
   }
 
-  getData() {
-    this._http
-      .get(
-        APIBuilder.useProxy(
-          'https://europop.ge/api/featured-posts'
-        )
-      )
-      .subscribe((data) => console.log(data));
-  }
+
 }

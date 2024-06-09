@@ -15,7 +15,6 @@ export class AppComponent {
     this.translateService.setDefaultLang('ka');
     this.translateService.use(localStorage.getItem('lang') || 'ka');
 
-    authService.getData()
   }
   title = 'Project';
 }

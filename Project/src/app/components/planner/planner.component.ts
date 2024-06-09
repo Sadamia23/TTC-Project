@@ -33,13 +33,19 @@ export class PlannerComponent implements OnInit {
   setUpMap(coords: [number, number]) {
     const map = new mapboxgl.Map({
       container: 'map',
-      style: environment.mapbox.styles,
+      style: environment.mapbox.styles.custom,
       center: coords,
-      zoom: 12,
+      zoom: 13,
       accessToken: environment.mapbox.mapboxAccessToken,
+      keyboard: true,
     });
 
     const nav = new mapboxgl.NavigationControl();
     map.addControl(nav);
+    const marker = new mapboxgl.Marker({
+      color: '#FF0000',
+    })
+      .setLngLat(coords)
+      .addTo(map);
   }
 }

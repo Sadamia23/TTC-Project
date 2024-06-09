@@ -73,3 +73,9 @@ nz-menu-item::selection {
 .ant-menu.ant-menu-dark .ant-menu-item-selected {
   background-color: #002140;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  padding: 200px;
+}

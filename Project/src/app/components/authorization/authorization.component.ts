@@ -16,11 +16,15 @@ export class AuthorizationComponent {
   constructor(private _authService: AuthService, private _router: Router) {}
 
   loginAction() {
-    this._authService
-      .login(this.email, this.password)
-      .subscribe((data: IToken) => {
+    this._authService.login(this.email, this.password).subscribe(
+      (data: IToken) => {
         localStorage.setItem('token', data.access_token);
         this._router.navigate(['/profile']);
-      });
+        this.isWrong = false;
+      },
+      () => {
+        this.isWrong = true;
+      }
+    );
   }
 }

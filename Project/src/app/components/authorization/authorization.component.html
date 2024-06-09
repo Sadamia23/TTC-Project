@@ -1,5 +1,5 @@
 <div class="auth-container">
-  <div class="auth-form">
+  <div class="auth-form" [ngClass]="{ 'wrong-password': isWrong }">
     <h2>{{ "authorization" | translate }}</h2>
     <form (ngSubmit)="loginAction()">
       <label for="login-email">{{ "Email" | translate }}</label>
@@ -17,12 +17,14 @@
         id="login-password"
         [(ngModel)]="password"
         name="password"
-        [ngClass]="{ 'wrong': isWrong}"
         required
       />
 
       <input type="submit" value="{{ 'Log In' | translate }}" />
     </form>
+    <div class="error" [ngClass]="{ 'd-flex': isWrong }">
+      <span>{{ "Email or Password is wrong. Try Again!" | translate }}</span>
+    </div>
     <div class="register-container">
       <span
         >{{ "Don't have an account?" | translate }}

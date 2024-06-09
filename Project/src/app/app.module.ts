@@ -5,6 +5,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NzIconModule } from 'ng-zorro-antd/icon';
 import { NzMenuModule } from 'ng-zorro-antd/menu';
 import { NzLayoutModule } from 'ng-zorro-antd/layout';
+import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +44,12 @@ import { VacanciesComponent } from './components/vacancies/vacancies.component';
 // PrimeNG
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GalleriaModule } from 'primeng/galleria';
+import { AllNewsComponent } from './components/all-news/all-news.component';
+import { FaresComponent } from './components/fares/fares.component';
+import { ErrorComponent } from './components/error/error.component';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import { SidebarModule } from 'primeng/sidebar';
+import { ButtonModule } from 'primeng/button';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -71,6 +78,9 @@ register();
     ContactComponent,
     ReportSchemeComponent,
     VacanciesComponent,
+    AllNewsComponent,
+    FaresComponent,
+    ErrorComponent,
   ],
   imports: [
     BrowserModule,
@@ -89,6 +99,10 @@ register();
     }),
     BrowserAnimationsModule,
     GalleriaModule,
+    NzPaginationModule,
+    ProgressSpinnerModule,
+    SidebarModule,
+    ButtonModule,
   ],
   providers: [
     HttpClient,

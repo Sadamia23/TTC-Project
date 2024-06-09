@@ -61,5 +61,10 @@
   "Phone": "ტელეფონის ნომერი",
   "Fax": "ფაქსი",
   "Hotline": "ცხელი ხაზი",
-  "Address: 0112 Tbilisi, Station Square №2":"მისამართი: 0112 თბილისი, სადგურის მოედანი №2"
+  "Address: 0112 Tbilisi, Station Square №2": "მისამართი: 0112 თბილისი, სადგურის მოედანი №2",
+  "tariffs": "ტარიფები",
+  "Oops! Something went wrong.": "გვერდი ვერ მოიძებნა.",
+  "We encountered an error. Please try again later.": "დაფიქსირდა შეცდომა. გთხოვთ სცადოთ მოგვიანებით.",
+  "Go back to Home": "უკან დაბრუნება",
+  "Email or Password is wrong. Try Again!": "მეილი ან პაროლი არასწორია სცადეთ ხელახლა!"
 }

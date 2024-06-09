@@ -9,6 +9,8 @@ import { Router } from '@angular/router';
   styleUrl: './navbar.component.css',
 })
 export class NavbarComponent implements OnInit {
+  sidebarVisible2: boolean = false;
+
   isEng: boolean = false;
   isGeo: boolean = true;
 

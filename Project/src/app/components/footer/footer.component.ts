@@ -17,16 +17,6 @@ export class FooterComponent {
   }
 
   scrollToTop() {
-    const scrollDuration = 300; //
-    const scrollStep = -window.scrollY / (scrollDuration / 15);
-
-    function animateScroll() {
-      if (window.scrollY !== 0) {
-        window.scrollBy(0, scrollStep);
-        requestAnimationFrame(animateScroll);
-      }
-    }
-
-    animateScroll();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   }
 }
