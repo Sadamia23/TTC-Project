@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 //ng-zorro
 import { NzIconModule } from 'ng-zorro-antd/icon';
-import { NzMenuModule } from 'ng-zorro-antd/menu';
-import { NzLayoutModule } from 'ng-zorro-antd/layout';
 import { NzPaginationModule } from 'ng-zorro-antd/pagination';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -50,6 +48,9 @@ import { ErrorComponent } from './components/error/error.component';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
+import { DockModule } from 'primeng/dock';
+import { RadioButtonModule } from 'primeng/radiobutton';
+import { CommonModule } from '@angular/common';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http);
@@ -87,8 +88,6 @@ register();
     AppRoutingModule,
     FormsModule,
     NzIconModule,
-    NzMenuModule,
-    NzLayoutModule,
     HttpClientModule,
     TranslateModule.forRoot({
       loader: {
@@ -103,6 +102,9 @@ register();
     ProgressSpinnerModule,
     SidebarModule,
     ButtonModule,
+    DockModule,
+    RadioButtonModule,
+    CommonModule,
   ],
   providers: [
     HttpClient,

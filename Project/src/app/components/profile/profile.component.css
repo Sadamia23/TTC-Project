@@ -1,17 +1,22 @@
 .avatar {
   width: 300px;
   height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .avatar img {
   width: 100%;
   border-radius: 50%;
+  box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px,
+    rgba(6, 24, 44, 0.65) 0px 4px 6px -1px,
+    rgba(255, 255, 255, 0.08) 0px 1px 0px inset;
 }
 
 .profile-card {
   display: flex;
   gap: 50px;
-  margin-top: 50px;
   justify-content: center;
 }
 
@@ -19,63 +24,124 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  gap: 5px;
 }
 
-.logo {
-  height: 32px;
-  margin: 15px;
+.profile-info h1 {
+  border-bottom: 2px solid red !important;
+}
+
+.spinner-container {
+  margin: 200px auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-nz-header {
-  background: #fff;
-  padding-left: 30px;
-}
-
-nz-content {
-  margin: 0 16px;
-}
-
-nz-breadcrumb {
-  margin: 16px 0;
+.container {
+  display: flex;
+  padding: 15px;
+  background: linear-gradient(to top, #fafafa, rgb(255, 133, 133));
+  border-top-left-radius: 12px;
+  border-top-right-radius: 12px;
 }
 
 .inner-content {
-  padding: 24px;
-  background: #fff;
-  min-height: 360px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-nz-footer {
+.bio {
+  max-width: 40%;
+  border-left: 1px solid black;
+  padding: 15px;
+}
+section {
+  padding: 40px 0px 80px;
+  background-color: #1f2126;
+}
+
+.dock-window {
+  width: 100%;
+  height: 200px;
+  position: relative;
+  background: linear-gradient(to bottom, #fafafa, rgb(255, 133, 133));
+  border-bottom-left-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+
+.p-dock {
+  z-index: 1000;
+}
+.menu {
+  width: 1350px;
+  margin: auto;
+}
+.bio h1 {
   text-align: center;
 }
-
-.ant-layout-sider {
-  background: #b11616;
+.bio {
+  margin: auto;
+}
+.bio p {
+  font-size: 20px !important;
+  text-align: justify;
 }
 
-.ant-menu.ant-menu-dark {
-  color: rgba(255, 255, 255, 0.65);
-  background: #e7343f;
+@media (max-width: 1400px) {
+  .menu,
+  .container {
+    width: 80%;
+  }
+  .avatar {
+    width: 200px;
+    height: 200px;
+  }
 }
 
-.nz-menu-item {
-  background-color: red !important;
+@media (max-width: 1200px) {
+  .profile-card {
+    flex-direction: column;
+  }
+  .inner-content {
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  .bio {
+    margin: 15px;
+  }
 }
 
-nz-menu-item::selection {
-  color: #fff;
-  background: #000000;
+@media (max-width: 700px) {
+  .inner-content {
+    flex-direction: column;
+  }
+  .avatar {
+    margin: auto;
+  }
+  .bio {
+    border: none;
+    margin: 0px;
+    max-width: 80%;
+  }
+  .profile-card {
+    width: 80%;
+  }
 }
 
-.ant-menu.ant-menu-dark .ant-menu-item-selected {
-  background-color: #002140;
-}
-
-.container {
-  display: flex;
-  justify-content: center;
-  padding: 200px;
+@media (max-width: 480px) {
+  .bio p {
+    font-size: 14px !important;
+  }
+  .profile-info h1 {
+    font-size: 16px !important;
+  }
+  .avatar img,
+  .avatar {
+    height: 130px;
+    width: 130px;
+  }
+  .profile-card {
+    gap: 10px;
+  }
 }

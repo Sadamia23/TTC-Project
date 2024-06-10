@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IUser } from '../../interfaces/user.model';
 import { AuthService } from '../../services/auth.service';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-profile',
@@ -25,7 +26,7 @@ export class ProfileComponent {
           this.hideSpinner();
         }
       );
-    }, 1000);
+    }, 2000);
   }
 
   showSpinner() {
@@ -34,5 +35,30 @@ export class ProfileComponent {
 
   hideSpinner() {
     this.isLoading = false;
+  }
+
+  items: MenuItem[] | undefined;
+
+  position: string = 'bottom';
+
+  ngOnInit() {
+    this.items = [
+      {
+        label: 'Finder',
+        icon: 'https://primefaces.org/cdn/primeng/images/dock/finder.svg',
+      },
+      {
+        label: 'App Store',
+        icon: 'https://primefaces.org/cdn/primeng/images/dock/appstore.svg',
+      },
+      {
+        label: 'Photos',
+        icon: 'https://primefaces.org/cdn/primeng/images/dock/photos.svg',
+      },
+      {
+        label: 'Trash',
+        icon: 'https://primefaces.org/cdn/primeng/images/dock/trash.png',
+      },
+    ];
   }
 }

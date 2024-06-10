@@ -66,5 +66,8 @@
   "Oops! Something went wrong.": "გვერდი ვერ მოიძებნა.",
   "We encountered an error. Please try again later.": "დაფიქსირდა შეცდომა. გთხოვთ სცადოთ მოგვიანებით.",
   "Go back to Home": "უკან დაბრუნება",
-  "Email or Password is wrong. Try Again!": "მეილი ან პაროლი არასწორია სცადეთ ხელახლა!"
+  "Email or Password is wrong. Try Again!": "მეილი ან პაროლი არასწორია სცადეთ ხელახლა!",
+  "Creation Date": "შექმნის თარიღი",
+  "Role": "როლი",
+  "Bio": "ბიო"
 }

@@ -66,5 +66,8 @@
   "Oops! Something went wrong.": "Oops! Something went wrong.",
   "We encountered an error. Please try again later.": "We encountered an error. Please try again later.",
   "Go back to Home": "Go back to Home",
-  "Email or Password is wrong. Try Again!": "Email or Password is wrong. Try Again!"
+  "Email or Password is wrong. Try Again!": "Email or Password is wrong. Try Again!",
+  "Creation Date": "Creation Date",
+  "Role": "Role",
+  "Bio": "Bio"
 }

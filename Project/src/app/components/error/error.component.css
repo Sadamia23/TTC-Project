@@ -36,3 +36,33 @@
 .container {
   padding: 50px;
 }
+
+@media (max-width: 480px) {
+  .error-title {
+    font-size: 30px;
+  }
+  .error-message,
+  .error-link {
+    font-size: 20px;
+  }
+}
+@media (max-width: 440px) {
+  .error-title {
+    font-size: 20px;
+  }
+  .error-message,
+  .error-link {
+    font-size: 14px;
+  }
+  .error-link {
+    padding: 5px 7px;
+  }
+  .error-container {
+    padding: 10px;
+  }
+}
+@media (max-width: 440px) {
+  .container {
+    padding: 20px;
+  }
+}

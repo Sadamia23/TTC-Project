@@ -20,7 +20,7 @@ export class APIBuilder {
   private static NEWS_DOMAIN_URL = 'https://newsapi.org/';
   private static NEWS_API_VERSION = 'v2/';
   private static NEWS_API_ENDPOINT =
-    '/everything?q=tesla&from=2024-05-09&sortBy=publishedAt&apiKey=';
+    '/top-headlines?country=us&category=business&apiKey=';
 
   public static getNews(apiKey: string) {
     return (
@@ -31,3 +31,6 @@ export class APIBuilder {
     );
   }
 }
+
+
+// https://newsapi.org/v2/top-headlines?country=us&category=business&apiKey=1ede808a052e43da86b324e66d7051b6

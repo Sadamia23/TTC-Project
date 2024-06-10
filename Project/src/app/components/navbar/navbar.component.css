@@ -104,7 +104,7 @@
   padding: 11px 0px;
   font-size: 13px;
   line-height: 18px;
-  top: -80px;
+  top: -800px;
   transition: all 0.1s;
   list-style-type: none;
   display: flex;
@@ -165,7 +165,7 @@
   flex-wrap: nowrap;
   gap: 40px;
 }
-@media (max-width: 1300px) {
+@media (max-width: 1320px) {
   .container {
     max-width: 1140px;
   }
@@ -180,6 +180,12 @@
   .main-menu {
     padding-left: 0px;
   }
+  .hover-target:hover + .hover-list,
+.hover-container:hover .hover-list,
+.hover-list:hover {
+  top: 160px;
+}
+
 }
 
 @media (max-width: 865px) {
@@ -283,4 +289,8 @@
 
 .main-menu-items .main-menu-item a:hover {
   color: #e7343f;
+}
+
+.a-mobile:hover a {
+  color: black;
 }

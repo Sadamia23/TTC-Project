@@ -45,6 +45,7 @@
   justify-content: center;
   padding-top: 10px;
   color: #777676;
+  text-align: center;
 }
 
 .register-container a:hover {
@@ -63,4 +64,10 @@
 }
 .d-flex {
   display: flex;
+}
+
+@media (max-width: 450px) {
+  .auth-container {
+    padding: 10px;
+  }
 }
