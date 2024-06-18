@@ -38,13 +38,13 @@ import { AboutUsComponent } from './components/about-us/about-us.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ReportSchemeComponent } from './components/report-scheme/report-scheme.component';
 import { VacanciesComponent } from './components/vacancies/vacancies.component';
+import { AllNewsComponent } from './components/all-news/all-news.component';
+import { FaresComponent } from './components/fares/fares.component';
+import { ErrorComponent } from './components/error/error.component';
 
 // PrimeNG
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { GalleriaModule } from 'primeng/galleria';
-import { AllNewsComponent } from './components/all-news/all-news.component';
-import { FaresComponent } from './components/fares/fares.component';
-import { ErrorComponent } from './components/error/error.component';
 import { ProgressSpinnerModule } from 'primeng/progressspinner';
 import { SidebarModule } from 'primeng/sidebar';
 import { ButtonModule } from 'primeng/button';
